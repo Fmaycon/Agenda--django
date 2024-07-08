@@ -8,3 +8,6 @@ class Contact(models.Model):
     email = models.EmailField(max_length=254, blank=True)
     Data_atual = models.DateTimeField(default=timezone.now)
     complemento = models.TextField(blank=True)
+
+    def __str__(self) -> str:
+        return f'{self.Primeiro_nome} {self.segundo_nome}'
