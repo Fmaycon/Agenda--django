@@ -4,7 +4,7 @@ from contacts import models
 @admin.register(models.Contact)
 class ContactAdmin(admin.ModelAdmin):
     list_display = 'Primeiro_nome', 'segundo_nome', 'telefone', 'email', 'Data_atual',
-    ordering = '-id'
+    ordering = '-id',
     # list_filter = 'create_date',
     search_fields = 'Primeiro_nome', 'segundo_nome', 'telefone', 'email',
     list_per_page = 10
