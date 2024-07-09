@@ -1,6 +1,11 @@
 from django.contrib import admin
 from contacts import models
 
+@admin.register(models.Category)
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = 'Nome',
+    ordering = '-id',
+
 @admin.register(models.Contact)
 class ContactAdmin(admin.ModelAdmin):
     list_display = 'Primeiro_nome', 'sobrenome', 'telefone', 'email', 'Data_atual',
